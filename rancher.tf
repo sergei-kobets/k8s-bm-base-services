@@ -8,12 +8,12 @@ resource "helm_release" "rancher" {
 
   set {
     name  = "hostname"
-    value = "rancher.kobets.onlin"
+    value = "rancher.hostname.online"
   }
 
   set {
     name  = "bootstrapPassword"
-    value = "changme"
+    value = "changeme"
   }
 
   depends_on = [

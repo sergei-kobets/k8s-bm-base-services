@@ -13,12 +13,12 @@ resource "helm_release" "rancher" {
 
   set {
     name  = "hostname"
-    value = "rancher.kobets.online"
+    value = var.hostname
   }
 
   set {
     name  = "bootstrapPassword"
-    value = "7NfiSXTXXE6HhiY1Ihaf"
+    value = var.bootstrapPassword
   }
 
   depends_on = [

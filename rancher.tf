@@ -7,13 +7,18 @@ resource "helm_release" "rancher" {
   version          = "2.11.2"
 
   set {
+    name  = "replicas"
+    value = 1
+  }
+
+  set {
     name  = "hostname"
-    value = "rancher.kobets.onlin"
+    value = "rancher.kobets.online"
   }
 
   set {
     name  = "bootstrapPassword"
-    value = "changme"
+    value = "7NfiSXTXXE6HhiY1Ihaf"
   }
 
   depends_on = [

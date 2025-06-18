@@ -19,15 +19,17 @@ A Terraform-based infrastructure-as-code (IaC) setup for deploying essential Kub
 ## 🚀 Deployment
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/sergei-kobets/k8s-bm-base-services.git
    cd k8s-bm-base-services
 
 2. Apply configuration:
-
    ```bash
-   terraform apply
+   terraform init && terraform apply
+
+3. Apply & define ip address pool for metallb (change addresses range in yaml file according your router settings)
+   ```bash
+   kubectl apply -f metallb/ipaddresspool.yaml
 
 ## 🧩 Components
 - provider.tf: Configures the Kubernetes provider.
